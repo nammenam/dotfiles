@@ -1,0 +1,92 @@
+theme = "hex_steelV2"
+
+[editor]
+mouse = true
+color-modes = true
+popup-border = "all"
+auto-format = true
+text-width = 120
+scrolloff = 10
+auto-pairs = false
+
+[editor.whitespace.render]
+space = "none"
+tab = "none"
+nbsp = "none"
+nnbsp = "none"
+newline = "none"
+
+[editor.whitespace.characters]
+newline = "·"
+
+[editor.cursor-shape]
+insert = "underline"
+normal = "block"
+select = "block"
+
+[editor.soft-wrap]
+enable = true
+max-wrap = 25 # increase value to reduce forced mid-word wrapping
+max-indent-retain = 0
+wrap-indicator = ""  # set wrap-indicator to "" to hide it
+wrap-at-text-width = true
+
+# s and d becomes navigation keys
+# a replaces d as deletion
+# w repaces a
+# f becomes shortcut L replaces f
+[keys.insert]
+"C-c" = "normal_mode"
+
+[keys.normal]
+s = ["page_cursor_half_down","goto_window_center"]
+d = ["page_cursor_half_up","goto_window_center"]
+A = "delete_char_backward"
+a = "delete_selection"
+L = "find_next_char"
+H = "select_regex"
+f = "goto_word"
+w = "append_mode"
+esc = ["keep_primary_selection", "collapse_selection"]
+";" = "flip_selections"
+F = "repeat_last_motion"
+"A-;" = "no_op"
+"A-." = "no_op"
+x = ["select_mode", "extend_line_below"]
+X = ["select_mode", "extend_line_above"]
+
+[keys.select]
+s = ["page_cursor_half_down", "goto_window_center"]
+d = ["page_cursor_half_up","goto_window_center"]
+w = "append_mode"
+f = "extend_to_word"
+H = "select_regex"
+esc = ["keep_primary_selection", "collapse_selection", "exit_select_mode"]
+v = "extend_to_line_bounds"
+";" = "flip_selections"
+F = "repeat_last_motion"
+X = "extend_line_above"
+"A-;" = "no_op"
+"A-." = "no_op"
+a = "delete_selection"
+A = "delete_selection_noyank"
+
+[keys.normal.g]
+j = "goto_window_bottom"
+k = "goto_window_top"
+l = "goto_line_end"
+h = "goto_line_start"
+s = "goto_first_nonwhitespace"
+
+[keys.normal.space]
+f = "file_picker_in_current_directory"
+F = "file_picker"
+K = "signature_help"
+
+[editor.statusline]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.lsp]
+auto-signature-help = false

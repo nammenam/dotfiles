@@ -1,0 +1,2 @@
+event=button/lid LID close
+action=/etc/acpi/actions/lid_close_screen_off.sh

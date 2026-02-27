@@ -1,0 +1,26 @@
+configuration {
+  modes: [ combi,drun ];
+  combi-modes: [ window, drun, run ];
+}
+entry {
+    placeholder: "Search";
+}
+element {
+  orientation: horizontal;
+  children: [ element-text, element-icon ];
+  spacing: 5px;
+}
+element-icon {
+    size: 1.0em;
+}
+element-text {
+    vertical-align: 0.5;
+}
+entry {
+  cursor-color: rgb(220,20,60);
+  cursor-width: 8px;
+}
+font {
+    name: "RobotoMono Nerd Font Medium";
+    size: 12;
+}

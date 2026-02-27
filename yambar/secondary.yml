@@ -1,0 +1,134 @@
+# Typical laptop setup, with wifi, brightness, battery etc, for
+# i3/Sway.
+
+# For X11/i3, you'll want to replace calls to swaymsg with i3-msg, and
+# the sway-xkb module with the xkb module.
+roboto: &roboto Inter Nerd Font:pixelsize=16"
+
+# This is THE bar configuration
+bar:
+  height: 24
+  location: top
+  spacing: 6
+  margin: 10
+  # Default font
+  font: *roboto
+
+  foreground: b0b0b0ff
+  background: 202020ff
+  border:
+    width: 2
+    color: c0c0c0ff
+    margin: 5
+    top-margin: 0
+
+  left:
+    - i3:
+        sort: ascending
+        anchors: # Not used (directly) by f00bar; used here to avoid duplication
+          - string: &i3_common {margin: 0, on-click: "swaymsg --quiet workspace {name}"}
+          - string: &default {<<: *i3_common, text: "   {name}   "}
+          - focused: &focused
+              deco:
+                stack:
+                  - background:
+                      color: ffffff35
+                  - border:
+                      size: 2
+                      color: c0c0c0ff
+          - invisible: &invisible {foreground: ffffff55}
+          - urgent: &urgent
+              foreground: 000000ff
+          - map: &i3_mode
+              default:
+                - string:
+                    margin: 10
+                    text: "{mode}"
+                    deco: {background: {color: ffffff35}}
+                - empty: {right-margin: 14}
+              conditions:
+                mode == default: {empty: {}}
+        content:
+          "":
+            map:
+              conditions:
+                state == focused:   {string: {<<: [*default, *focused]}}
+                state == unfocused: {string: {<<: *default}}
+                state == invisible: {string: {<<: [*default, *invisible]}}
+                state == urgent:    {string: {<<: [*default, *urgent]}}
+          current:
+            map : {<<: *i3_mode}
+  # center:
+  right:
+    - clock:
+        time-format: "%a %b %d, %I:%M%p"
+        content:
+          - string: {text: "{time}"}
+    - pipewire:
+        content:
+          map:
+            conditions:
+              type == "sink":
+                map:
+                  conditions:
+                    muted:
+                      list:
+                        spacing: 0
+                        items:
+                          - string: {text: "  {cubic_volume}%", foreground: ff0000ff}
+                    ~muted:
+                        ramp:
+                          tag: linear_volume
+                          items:
+                            - string: {text: "  {cubic_volume}%"}
+                            - string: {text: "  {cubic_volume}%"}
+                            - string: {text: "  {cubic_volume}%"}
+    - battery:
+        name: BAT0
+        poll-interval: 30000
+        anchors:
+          discharging: &discharging
+            list:
+              items:
+                - ramp:
+                    tag: capacity
+                    items:
+                      - string: {text: , foreground: ff0000ff, font: *roboto}
+                      - string: {text: , foreground: ffa600ff, font: *roboto}
+                      - string: {text: , font: *roboto}
+                      - string: {text: , font: *roboto}
+                      - string: {text: , font: *roboto}
+                      - string: {text: , font: *roboto}
+                      - string: {text: , font: *roboto}
+                      - string: {text: , font: *roboto}
+                      - string: {text: , font: *roboto}
+                      - string: {text: , foreground: 00ff00ff, font: *roboto}
+                - string: {text: "{capacity}%"}
+        content:
+          map:
+            conditions:
+              state == unknown:
+                <<: *discharging
+              state == discharging:
+                <<: *discharging
+              state == charging:
+                - string: {text: , foreground: b0b0b0ff, font: *roboto}
+                - string: {text: "{capacity}%"}
+              state == full:
+                - string: {text: , foreground: b0b0b0ff, font: *roboto}
+                - string: {text: "{capacity}%"}
+              state == "not charging":
+                - ramp:
+                    tag: capacity
+                    items:
+                      - string: {text:  , foreground: ff0000ff, font: *roboto}
+                      - string: {text:  , foreground: ffa600ff, font: *roboto}
+                      - string: {text:  , foreground: 00ff00ff, font: *roboto}
+                      - string: {text:  , foreground: 00ff00ff, font: *roboto}
+                      - string: {text:  , foreground: 00ff00ff, font: *roboto}
+                      - string: {text:  , foreground: 00ff00ff, font: *roboto}
+                      - string: {text:  , foreground: 00ff00ff, font: *roboto}
+                      - string: {text:  , foreground: 00ff00ff, font: *roboto}
+                      - string: {text:  , foreground: 00ff00ff, font: *roboto}
+                      - string: {text:  , foreground: 00ff00ff, font: *roboto}
+                - string: {text: "{capacity}%"}

@@ -1,0 +1,17 @@
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[user]
+	email = bragewiseth@icloud.com
+	name = Brage
+[init]
+	defaultBranch = main
+[core]
+	editor = helix
+[http]
+	postBuffer = 157286400
+[pull]
+	ff = only
