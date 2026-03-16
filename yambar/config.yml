@@ -4,6 +4,7 @@
 # For X11/i3, you'll want to replace calls to swaymsg with i3-msg, and
 # the sway-xkb module with the xkb module.
 roboto: &roboto Geist:weight=medium:pixelsize=16"
+# roboto: &roboto Geist Pixel Square:weight=regular:pixelsize=16"
 mono: &mono GeistMonoNF:weight=medium:pixelsize=16"
 # roboto: &roboto Departure Mono:pixelsize=16"
 # roboto: &roboto Liga SFMonoNerdFont Medium:pixelsize=16"

@@ -5,7 +5,7 @@ mouse = true
 color-modes = true
 popup-border = "all"
 auto-format = true
-text-width = 120
+text-width = 110
 scrolloff = 10
 auto-pairs = false
 
