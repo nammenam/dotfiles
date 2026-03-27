@@ -25,7 +25,8 @@ input "type:touchpad" {
        dwt disabled
 }
 
-output * bg /home/brage/Pictures/Skeleton_reading_wall.jpg fill
+# output * bg /home/brage/Pictures/Skeleton_reading_wall.jpg fill
+output * bg /home/brage/Pictures/mcescherwall.jpg fill
 # output HDMI-A-1 mode 2560x1440@144Hz scale 1
 output eDP-1 mode 2560x1440@60Hz scale 1
 
@@ -98,10 +99,7 @@ bindsym $mod+g split h
 # Split in vertical orientation
 bindsym $mod+v split v
 # take screenshot
-bindsym $mod+u exec grim -T "$(swaymsg -t get_tree | jq -j '.. | select(.type?) | select(.focused).foreign_toplevel_identifier')"
-bindsym $mod+i exec grim
-bindsym $mod+o exec grim
-bindsym $mod+Ctrl+o  exec grim save window
+bindsym $mod+o exec grimshot save active
 
 bindsym $mod+f fullscreen toggle
 # Change container layout (stacked, tabbed, toggle split)
@@ -121,7 +119,7 @@ bindsym $mod+Shift+c reload
 
 set $locker swaylock-fancy && sleep 1
 
-set $mode_system l → 󰌾    e → 󰗽     s → 󰤄    h → 󰒲    r → 󰜉    Shift+s → 󰐥 
+set $mode_system l → 󰌾    e → 󰗽     s → 󰤄    h → 󰒲    r → 󰜉    Shift+s → 󰐥
 
 mode "$mode_system" {
     bindsym l exec --no-startup-id $locker, mode "default"
@@ -129,7 +127,7 @@ mode "$mode_system" {
     bindsym s exec --no-startup-id $locker && systemctl suspend, mode "default"
     bindsym h exec --no-startup-id $locker && systemctl hibernate, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
+    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
 
     # back to normal: Enter or Escape or q
     bindsym Return mode "default"
