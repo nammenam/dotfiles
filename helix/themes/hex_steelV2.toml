@@ -20,8 +20,8 @@
 "type" = { fg = "t8", modifiers = ["bold"] }
 "namespace" = { fg = "t6", modifiers = ["bold"] }
 "variable" = { fg = "t4" }
-"variable.parameter" = { fg = "t6" } 
-"variable.other.member" = { fg = "t3" } 
+"variable.parameter" = { fg = "t6" }
+"variable.other.member" = { fg = "t3" }
 "label" = { fg = "t4" }
 
 "diff.plus" = { fg = "diff_plus" }
@@ -96,7 +96,7 @@
 # t4 = "#909090"
 # t5 = "#727b7c"
 # t6 = "#6e8789"
-# t7 = "#d85c60"
+# t7 = "#d85c60" #red
 # t8 = "#9bc1bb"
 # t9 = "#b5c5c5"
 # t10 = "#c3c3bd"
@@ -131,7 +131,7 @@ t3 = "#808080" # grey
 t4 = "#909090" # foreground
 t5 = "#727272" # grey2
 t6 = "#d4c69f" # beige
-t7 = "#d85c60" # red
+t7 = "#9dc183" # red
 t8 = "#9bc1bb" # teal
 t9 = "#b5c5c5" # less teal
 t10 = "#cecece" # less teal2
