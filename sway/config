@@ -28,7 +28,7 @@ input "type:touchpad" {
 # output * bg /home/brage/Pictures/Skeleton_reading_wall.jpg fill
 output * bg /home/brage/Pictures/mcescherwall.jpg fill
 # output HDMI-A-1 mode 2560x1440@144Hz scale 1
-output eDP-1 mode 2560x1440@165Hz scale 1 --adaptive-sync enabled
+output eDP-1 mode 2560x1440@165Hz scale 1 adaptive_sync on
 
 set $menu tofi-drun
 bindsym $mod+d exec $menu
