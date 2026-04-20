@@ -6,8 +6,8 @@ ZSH_THEME="bira"
 
 plugins=(
     fzf
-    git 
-    zsh-autosuggestions 
+    git
+    zsh-autosuggestions
     history-substring-search
 )
 
@@ -26,6 +26,7 @@ export PATH=$PATH:~/.cargo/bin/
 
 alias py="python"
 alias hx="helix"
+alias zig-master="zig"
 alias uiologin="ssh -YC bragewi@login.uio.no"
 alias uiofolder="sshfs bragewi@login.uio.no: /home/brage/IFI -o reconnect,modules=iconv,from_code=utf8"
 alias fastfetch="fastfetch -l ~/dotfiles/ascii/skull.txt --logo-color-1 yellow"
