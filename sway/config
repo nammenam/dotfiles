@@ -137,7 +137,7 @@ mode "$mode_system" {
 bindsym $mod+Escape mode "$mode_system"
 bindsym $mod+Shift+e exit
 # resize window (you can also use the mouse for that)
-set $mode_resize resize [←↑↓→]  [hjkl]
+set $mode_resize resize [← ↑ ↓ →]  [h j k l]
         mode "$mode_resize" {
 
         bindsym h resize shrink width 64 px

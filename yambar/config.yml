@@ -46,6 +46,7 @@ bar:
                 - string:
                     margin: 10
                     text: "{mode}"
+                    font: *mono
                     deco: {background: {color: ffffff35}}
                 - empty: {right-margin: 14}
               conditions:
