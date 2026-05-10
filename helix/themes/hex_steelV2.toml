@@ -3,11 +3,11 @@
 "comment.block.documentation" = { bg = "comment_doc", modifiers = ["italic"] }
 "comment.line.documentation" = { bg = "comment_doc", modifiers = ["italic"] }
 
-"constant" = { fg = "t11" }
-"function" = { fg = "t10" }
+"constant" = { fg = "t10" }
+"function" = { fg = "t7" }
 "function.method" = { fg = "t7" }
-"function.macro" = { fg = "t7" }
-"keyword.storage.modifier" = { fg = "t7" }
+"function.macro" = { fg = "t9" }
+"keyword.storage.modifier" = { fg = "t11" }
 "keyword.control.import" = { fg = "t8" }
 "keyword.control" = { fg = "t8" }
 "keyword.function" = { fg = "t11" }
@@ -107,13 +107,13 @@
 # highlight_three = "#d4d987"
 
 # selection = "#4a9aa6"
-# selection_fg = "#080a0b"
+selection_fg = "#080a0b"
 
 # black = "#000000"
 # comment = "#654642"
 # comment_doc = "#234048"
-# hints = "#31353c"
-# ruler  = "#222320"
+hints = "#31353c"
+ruler  = "#222320"
 
 # error = "#ff4000"
 # warning = "#ffbf00"
@@ -136,6 +136,7 @@ t8 = "#9bc1bb" # teal
 t9 = "#b5c5c5" # less teal
 t10 = "#cecece" # less teal2
 t11 = "#f78c5e" # orange
+white = "#f0f0f0"
 
 highlight = "#dec683" #yellow
 highlight_two = "#f69c3c" #orange
