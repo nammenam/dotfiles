@@ -1,4 +1,4 @@
-"comment" = { fg = "comment" }
+"comment" = { fg = "comment", modifiers = ["italic"] }
 "comment.block.documentation" = { modifiers = ["italic"] }
 "comment.line.documentation" = { modifiers = ["italic"] }
 
