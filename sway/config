@@ -25,9 +25,10 @@ input "type:touchpad" {
        dwt disabled
 }
 
-output * bg /home/brage/Pictures/Skeleton_reading_wall.jpg fill
+# output * bg /home/brage/Pictures/Skeleton_reading_wall.jpg fill
+output * bg /home/brage/Media/Pictures/Moodboard/mcescherwall.jpg fill
 # output HDMI-A-1 mode 2560x1440@144Hz scale 1
-output eDP-1 mode 2560x1440@60Hz scale 1
+output eDP-1 mode 2560x1440@165Hz scale 1 adaptive_sync on
 
 set $menu tofi-drun
 bindsym $mod+d exec $menu
@@ -47,10 +48,9 @@ hide_edge_borders both
 for_window [class=".*"] floating enable
 # Exclude specific applications from floating (make them tiled)
 for_window [app_id="kitty"] floating disable, border pixel 1
-for_window [class="kitty"] floating disable, border pixel 1
 for_window [app_id="zen"] floating disable, border pixel 1
-for_window [class="firefox"] floating disable, border pixel 1
-for_window [class="chrome"] floating disable, border pixel 1
+for_window [app_id="google-chrome"] floating disable, border pixel 1
+for_window [app_id="blender"] floating disable, border pixel 1
 
 
 floating_minimum_size 50 x 50
@@ -98,10 +98,7 @@ bindsym $mod+g split h
 # Split in vertical orientation
 bindsym $mod+v split v
 # take screenshot
-bindsym $mod+u exec grim -T "$(swaymsg -t get_tree | jq -j '.. | select(.type?) | select(.focused).foreign_toplevel_identifier')"
-bindsym $mod+i exec grim
-bindsym $mod+o exec grim
-bindsym $mod+Ctrl+o  exec grim save window
+bindsym $mod+o exec grimshot save active
 
 bindsym $mod+f fullscreen toggle
 # Change container layout (stacked, tabbed, toggle split)
@@ -121,7 +118,7 @@ bindsym $mod+Shift+c reload
 
 set $locker swaylock-fancy && sleep 1
 
-set $mode_system l → 󰌾    e → 󰗽     s → 󰤄    h → 󰒲    r → 󰜉    Shift+s → 󰐥 
+set $mode_system l → 󰌾    e → 󰗽     s → 󰤄    h → 󰒲    r → 󰜉    Shift+s → 󰐥
 
 mode "$mode_system" {
     bindsym l exec --no-startup-id $locker, mode "default"
@@ -129,7 +126,7 @@ mode "$mode_system" {
     bindsym s exec --no-startup-id $locker && systemctl suspend, mode "default"
     bindsym h exec --no-startup-id $locker && systemctl hibernate, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
+    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
 
     # back to normal: Enter or Escape or q
     bindsym Return mode "default"
@@ -140,7 +137,7 @@ mode "$mode_system" {
 bindsym $mod+Escape mode "$mode_system"
 bindsym $mod+Shift+e exit
 # resize window (you can also use the mouse for that)
-set $mode_resize resize [←↑↓→]  [hjkl]
+set $mode_resize resize [← ↑ ↓ →]  [h j k l]
         mode "$mode_resize" {
 
         bindsym h resize shrink width 64 px

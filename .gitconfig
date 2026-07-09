@@ -1,17 +1,28 @@
-[credential "https://github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
-[credential "https://gist.github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
 [user]
-	email = bragewiseth@icloud.com
-	name = Brage
+    email = brage.wis@gmail.com
+    name = Brage Wiseth
 [init]
-	defaultBranch = main
+    defaultBranch = main
 [core]
-	editor = helix
+    editor = helix
+    pager = delta
 [http]
-	postBuffer = 157286400
+    postBuffer = 157286400
 [pull]
-	ff = only
+    ff = only
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    dark = true      # or light = true, or omit for auto-detection
+    # side-by-side = true
+[merge]
+    conflictStyle = zdiff3
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[alias]
+	count = rev-list --left-right --count
+	l = log --oneline --graph
