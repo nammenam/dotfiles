@@ -6,10 +6,10 @@
 "function" = { fg = "wh" }
 "function.method" = { fg = "wh" }
 "function.macro" = { fg = "wh" }
-"keyword.storage.modifier" = { fg = "t11" }
+"keyword.storage.modifier" = { fg = "re" }
 "keyword.control.import" = { fg = "t8" }
 "keyword.control" = { fg = "t8" }
-"keyword.function" = { fg = "t11" }
+"keyword.function" = { fg = "re" }
 "keyword" = { fg = "ye" }
 "operator" = { fg = "t8" }
 "punctuation" = { fg = "t9" }
@@ -61,7 +61,7 @@
 "ui.virtual.ruler" = { bg = "ruler" }
 "ui.virtual.indent-guide" = { fg = "gr0" }
 "ui.virtual.whitespace" = { fg = "gr0" }
-"ui.virtual.jump-label" = { fg = "t11", modifiers = ["bold"] }
+"ui.virtual.jump-label" = { fg = "re", modifiers = ["bold"] }
 "ui.virtual.inlay-hint" = { fg = "hints", modifiers = ["bold"] }
 
 "ui.bufferline" = { fg = "gr0", bg = "black" }
@@ -83,8 +83,8 @@
 "markup.bold" = { fg = "t4" }
 "markup.italic" = { fg = "t4" }
 "markup.strikethrough" = { fg = "t4", modifiers = ["crossed_out"] }
-"markup.link.url" = { fg = "t11", modifiers = ["underlined"] }
-"markup.link.text" = { fg = "t11" }
+"markup.link.url" = { fg = "re", modifiers = ["underlined"] }
+"markup.link.text" = { fg = "re" }
 "markup.quote" = { fg = "gr1" }
 "markup.raw" = { fg = "t4" }
 
@@ -103,7 +103,7 @@ ye = "#d4c69f" # beige
 gn = "#9dc183" # green
 t8 = "#9bc1bb" # teal
 t9 = "#b5c5c5" # less teal
-t11 = "#e4544d" # orange
+re = "#FD706B" # red
 wh = "#E0E0E0" # white
 
 highlight = "#dec683" #yellow
