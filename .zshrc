@@ -29,7 +29,6 @@ alias ssh="kitty +kitten ssh"
 alias ls='exa --icons --color=always --group-directories-first'
 alias ll='exa -alF --icons --color=always --group-directories-first'
 alias la='exa -a --icons --color=always --group-directories-first'
-alias l='exa -F --icons --color=always --group-directories-first'
 alias l.='exa -a | egrep "^\."'
 alias py="python"
 alias hx="helix"
