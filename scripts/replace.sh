@@ -14,12 +14,12 @@ echo "searching '$OLD_VAR'..."
 MATCH_COUNT=$(rg -c "\b$OLD_VAR\b" | wc -l || true)
 
 if [ "$MATCH_COUNT" -eq 0 ] || [ -z "$MATCH_COUNT" ]; then
-    echo "No match for'$OLD_VAR'."
+    echo "No match for '$OLD_VAR'."
     exit 0
 fi
 
-echo "Found '$OLD_VAR':"
-rg -l "\b$OLD_VAR\b"
+echo "Found '$OLD_VAR' on the following lines:"
+rg "\b$OLD_VAR\b"
 echo "----------------------------------------"
 
 read -p "Do you want to replace '$OLD_VAR' with '$NEW_VAR' in these files? (y/N): " CONFIRM
