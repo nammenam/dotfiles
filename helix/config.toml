@@ -37,6 +37,9 @@ wrap-at-text-width = false
 "C-c" = "normal_mode"
 
 [keys.normal]
+y = "yank_to_clipboard"
+p = "paste_clipboard_after"
+P = "paste_clipboard_before"
 s = "@6kzz"
 a = "@6jzz"
 H = "select_regex"
@@ -44,6 +47,9 @@ x = ["select_mode", "extend_line_below"]
 X = ["select_mode", "extend_line_above"]
 
 [keys.select]
+y = "yank_to_clipboard"
+p = "paste_clipboard_after"
+P = "paste_clipboard_before"
 s = "@6kzz"
 a = "@6jzz"
 H = "select_regex"
