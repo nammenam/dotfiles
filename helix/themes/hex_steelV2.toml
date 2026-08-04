@@ -1,6 +1,4 @@
-"comment" = { fg = "comment", modifiers = ["italic"] }
-"comment.block.documentation" = { modifiers = ["italic"] }
-"comment.line.documentation" = { modifiers = ["italic"] }
+"comment" = { fg = "comment" }
 
 "constant" = { fg = "gr1" }
 "function" = { fg = "wh" }
@@ -13,7 +11,7 @@
 "keyword" = { fg = "ye" }
 "operator" = { fg = "t8" }
 "punctuation" = { fg = "t9" }
-"string" = { fg = "ye", modifiers = ["italic"] }
+"string" = { fg = "ye" }
 "string.regexp" = { fg = "ye" }
 "tag" = { fg = "t4" }
 "type" = { fg = "t8", modifiers = ["bold"] }
