@@ -38,8 +38,6 @@ wrap-at-text-width = false
 
 [keys.normal]
 y = "yank_to_clipboard"
-p = "paste_clipboard_after"
-P = "paste_clipboard_before"
 s = "@6kzz"
 a = "@6jzz"
 H = "select_regex"
@@ -48,8 +46,6 @@ X = ["select_mode", "extend_line_above"]
 
 [keys.select]
 y = "yank_to_clipboard"
-p = "paste_clipboard_after"
-P = "paste_clipboard_before"
 s = "@6kzz"
 a = "@6jzz"
 H = "select_regex"
