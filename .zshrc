@@ -23,6 +23,16 @@ export BAT_THEME=ansi
 export PATH=$PATH:~/.cargo/bin/
 export PATH=$PATH:~/.local/bin/
 
+# Android SDK location
+export ANDROID_HOME=/opt/android-sdk
+export ANDROID_SDK_ROOT=/opt/android-sdk
+
+# Add SDK components to PATH
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
 
 alias fastfetch="fastfetch -l ~/dotfiles/ascii/skull.txt --logo-color-1 yellow"
 alias ssh="kitty +kitten ssh"
