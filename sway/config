@@ -116,7 +116,7 @@ bindsym $mod+a focus parent
 # Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+c reload
 
-set $locker swaylock-fancy && sleep 1
+set $locker swaylock && sleep 1
 
 set $mode_system l → 󰌾    e → 󰗽     s → 󰤄    h → 󰒲    r → 󰜉    Shift+s → 󰐥
 
