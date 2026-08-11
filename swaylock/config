@@ -1,9 +1,9 @@
 ignore-empty-password
 font=GeistMonoNF
 
-fade-in=0.2
+#fade-in=0.2
 
-effect-blur=20x2
+#effect-blur=20x2
 #effect-greyscale
 effect-scale=0.5
 
