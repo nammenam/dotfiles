@@ -25,7 +25,7 @@ input "type:touchpad" {
        dwt disabled
 }
 
-output * bg /usr/share/backgrounds/archlinux/geolanes.png fill
+output * bg ~/dotfiles/sway/backgrounds/geolanes.png fill
 
 # output HDMI-A-1 mode 2560x1440@144Hz scale 1
 output eDP-1 mode 2560x1440@165Hz scale 1 adaptive_sync on
