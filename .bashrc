@@ -55,3 +55,4 @@ set_bash_prompt() {
 }
 
 PROMPT_COMMAND=set_bash_prompt
+eval "$(zoxide init bash)"
