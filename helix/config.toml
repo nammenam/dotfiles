@@ -37,15 +37,19 @@ wrap-at-text-width = false
 "C-c" = "normal_mode"
 
 [keys.normal]
-y = "yank_to_clipboard"
 s = "@6kzz"
 a = "@6jzz"
 H = "select_regex"
 x = ["select_mode", "extend_line_below"]
 X = ["select_mode", "extend_line_above"]
+C-r = [
+    ":write-all",
+    ":insert-output scooter --no-stdin >/dev/tty",
+    ":redraw",
+    ":reload-all"
+]
 
 [keys.select]
-y = "yank_to_clipboard"
 s = "@6kzz"
 a = "@6jzz"
 H = "select_regex"
@@ -63,9 +67,14 @@ k = "goto_window_top"
 l = "goto_line_end"
 
 [keys.normal.space]
-f = "file_picker_in_current_directory"
-F = "file_picker"
 K = "signature_help"
+e = [
+  ':sh rm -f /tmp/unique-file-h21a434',
+  ':insert-output yazi "%{buffer_name}" --chooser-file=/tmp/unique-file-h21a434',
+  ':sh printf "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+  ':open %sh{cat /tmp/unique-file-h21a434}',
+  ':redraw',
+]
 
 [editor.statusline]
 mode.normal = "NORMAL"
