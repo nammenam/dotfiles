@@ -1,9 +1,5 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    export TERMINFO="/Applications/kitty.app/Contents/Resources/kitty/terminfo"
-fi
-
 ZSH_THEME="bira"
 
 plugins=(
@@ -17,19 +13,39 @@ source $ZSH/oh-my-zsh.sh
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=8"
 VIRTUAL_ENV_DISABLE_PROMPT=1
-export EDITOR=helix
+
 export BROWSER=zen
 export TERMINAL=kitty
-export TERM=kitty
-export SUDO_EDITOR=helix
-export VISUAL=helix
 export BAT_THEME=ansi
 export PATH=$PATH:~/.cargo/bin/
 export PATH=$PATH:~/.local/bin/
 
-# Android SDK location
-export ANDROID_HOME=/opt/android-sdk
-export ANDROID_SDK_ROOT=/opt/android-sdk
+
+# OS-Specific Configuration
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    # macOS (Homebrew & hx)
+    [[ -f /opt/homebrew/bin/brew ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
+    
+    export ANDROID_HOME="$HOME/Library/Android/sdk"
+    export ANDROID_SDK_ROOT="$ANDROID_HOME"
+    
+    export EDITOR=hx
+    export VISUAL=hx
+    export SUDO_EDITOR=hx
+    alias helix="hx"
+
+elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    # Linux (Linuxbrew & helix)
+    [[ -f /home/linuxbrew/.linuxbrew/bin/brew ]] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+    
+    export ANDROID_HOME="/opt/android-sdk"
+    export ANDROID_SDK_ROOT="$ANDROID_HOME"
+    
+    export EDITOR=helix
+    export VISUAL=helix
+    export SUDO_EDITOR=helix
+    alias hx="helix"
+fi
 
 # Add SDK components to PATH
 export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
