@@ -24,7 +24,7 @@ alt-shift-space = 'layout floating tiling'
 
 # --- APP LAUNCHERS & TERMINAL ---
 # Opens Ghostty terminal (or Alacritty, Kitty, WezTerm, etc.)
-alt-enter = 'exec-and-forget open -a Kitty'
+alt-enter = 'exec-and-forget /Applications/kitty.app/Contents/MacOS/kitty --single-instance'
 
 # Opens Raycast (or Spotlight/Alfred) as your dmenu/rofi replacement
 alt-d = 'exec-and-forget open /System/Applications/Launchpad.app'
