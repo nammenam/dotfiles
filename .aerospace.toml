@@ -1,3 +1,5 @@
+start-at-login = true
+
 # Main bindings mode
 [mode.main.binding]
 
@@ -25,7 +27,7 @@ alt-shift-space = 'layout floating tiling'
 alt-enter = 'exec-and-forget open -a Kitty'
 
 # Opens Raycast (or Spotlight/Alfred) as your dmenu/rofi replacement
-alt-d = 'exec-and-forget open -a Raycast'
+alt-d = 'exec-and-forget open /System/Applications/Launchpad.app'
 alt-b = 'exec-and-forget open -a "Zen Browser"'
 
 # --- WORKSPACE SWITCHING ---
