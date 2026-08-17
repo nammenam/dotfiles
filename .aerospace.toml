@@ -1,0 +1,48 @@
+# Main bindings mode
+[mode.main.binding]
+
+# --- SHIFT FOCUS (Vim keys) ---
+alt-h = 'focus left'
+alt-j = 'focus down'
+alt-k = 'focus up'
+alt-l = 'focus right'
+
+# --- MOVE WINDOWS ---
+alt-shift-h = 'move left'
+alt-shift-j = 'move down'
+alt-shift-k = 'move up'
+alt-shift-l = 'move right'
+
+# --- CLOSE / QUIT APPS ---
+# Actually quits/closes the focused process (like Sway's kill / macOS Cmd+Q)
+alt-q = 'close --quit-if-last-window'
+
+# --- TOGGLE FLOATING / TILING ---
+alt-shift-space = 'layout floating tiling'
+
+# --- APP LAUNCHERS & TERMINAL ---
+# Opens Ghostty terminal (or Alacritty, Kitty, WezTerm, etc.)
+alt-enter = 'exec-and-forget open -a Ghostty'
+
+# Opens Raycast (or Spotlight/Alfred) as your dmenu/rofi replacement
+alt-d = 'exec-and-forget open -a Raycast'
+alt-b = 'exec-and-forget open -a "Brave Browser"'
+
+# --- WORKSPACE SWITCHING ---
+alt-1 = 'workspace 1'
+alt-2 = 'workspace 2'
+alt-3 = 'workspace 3'
+alt-shift-1 = 'move-node-to-workspace 1'
+alt-shift-2 = 'move-node-to-workspace 2'
+alt-shift-3 = 'move-node-to-workspace 3'
+
+
+# --- FLOATING RULES & KEEP ON TOP ---
+# Force specific apps/dialogs to automatically open floating
+[[on-window-detected]]
+if.app-id = 'com.apple.systempreferences'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = 'layout floating'
