@@ -1,5 +1,9 @@
 export ZSH="$HOME/.oh-my-zsh"
 
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    export TERMINFO="/Applications/kitty.app/Contents/Resources/kitty/terminfo"
+fi
+
 ZSH_THEME="bira"
 
 plugins=(
@@ -36,10 +40,10 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 
 alias fastfetch="fastfetch -l ~/dotfiles/ascii/skull.txt --logo-color-1 yellow"
 alias ssh="kitty +kitten ssh"
-alias ls='exa --icons --color=always --group-directories-first'
-alias ll='exa -alF --icons --color=always --group-directories-first'
-alias la='exa -a --icons --color=always --group-directories-first'
-alias l.='exa -a | egrep "^\."'
+alias ls='eza --icons --color=always --group-directories-first'
+alias ll='eza -alF --icons --color=always --group-directories-first'
+alias la='eza -a --icons --color=always --group-directories-first'
+alias l.='eza -a | egrep "^\."'
 alias py="python"
 alias hx="helix"
 alias tt="taskwarrior-tui"

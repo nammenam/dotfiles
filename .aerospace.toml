@@ -22,11 +22,11 @@ alt-shift-space = 'layout floating tiling'
 
 # --- APP LAUNCHERS & TERMINAL ---
 # Opens Ghostty terminal (or Alacritty, Kitty, WezTerm, etc.)
-alt-enter = 'exec-and-forget open -a Ghostty'
+alt-enter = 'exec-and-forget open -a Kitty'
 
 # Opens Raycast (or Spotlight/Alfred) as your dmenu/rofi replacement
 alt-d = 'exec-and-forget open -a Raycast'
-alt-b = 'exec-and-forget open -a "Brave Browser"'
+alt-b = 'exec-and-forget open -a "Zen Browser"'
 
 # --- WORKSPACE SWITCHING ---
 alt-1 = 'workspace 1'
