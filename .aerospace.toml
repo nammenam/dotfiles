@@ -20,15 +20,11 @@ alt-shift-l = 'move right'
 alt-q = 'close --quit-if-last-window'
 
 # --- TOGGLE FLOATING / TILING ---
-alt-shift-space = 'layout floating tiling'
+alt-shift-f = 'layout floating tiling'
+# alt-f = 'fullscreen'
 
 # --- APP LAUNCHERS & TERMINAL ---
-# Opens Ghostty terminal (or Alacritty, Kitty, WezTerm, etc.)
-alt-enter = 'exec-and-forget /Applications/kitty.app/Contents/MacOS/kitty --single-instance'
-
-# Opens Raycast (or Spotlight/Alfred) as your dmenu/rofi replacement
-alt-d = 'exec-and-forget open /System/Applications/Launchpad.app'
-alt-b = 'exec-and-forget open -a "Zen Browser"'
+alt-enter = 'exec-and-forget kitty --single-instance --directory ~'
 
 # --- WORKSPACE SWITCHING ---
 alt-1 = 'workspace 1'
@@ -40,7 +36,6 @@ alt-6 = 'workspace 6'
 alt-7 = 'workspace 7'
 alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
-alt-0 = 'workspace 0'
 alt-shift-1 = 'move-node-to-workspace 1'
 alt-shift-2 = 'move-node-to-workspace 2'
 alt-shift-3 = 'move-node-to-workspace 3'
@@ -50,14 +45,13 @@ alt-shift-6 = 'move-node-to-workspace 6'
 alt-shift-7 = 'move-node-to-workspace 7'
 alt-shift-8 = 'move-node-to-workspace 8'
 alt-shift-9 = 'move-node-to-workspace 9'
-alt-shift-0 = 'move-node-to-workspace 0'
 
 
 # --- FLOATING RULES & KEEP ON TOP ---
 # Force specific apps/dialogs to automatically open floating
 [[on-window-detected]]
 if.app-id = 'com.apple.systempreferences'
-run = 'layout floating'
+run = 'layout tiling'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.finder'
