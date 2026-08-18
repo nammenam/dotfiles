@@ -24,7 +24,7 @@ alt-shift-f = 'layout floating tiling'
 # alt-f = 'fullscreen'
 
 # --- APP LAUNCHERS & TERMINAL ---
-alt-enter = 'exec-and-forget kitty --single-instance --directory ~'
+alt-enter = 'exec-and-forget /Applications/kitty.app/Contents/MacOS/kitty --single-instance --directory ~'
 
 # --- WORKSPACE SWITCHING ---
 alt-1 = 'workspace 1'
