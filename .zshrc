@@ -25,10 +25,10 @@ export PATH=$PATH:~/.local/bin/
 if [[ "$OSTYPE" == "darwin"* ]]; then
     # macOS (Homebrew & hx)
     [[ -f /opt/homebrew/bin/brew ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
-    
+
     export ANDROID_HOME="$HOME/Library/Android/sdk"
     export ANDROID_SDK_ROOT="$ANDROID_HOME"
-    
+
     export EDITOR=hx
     export VISUAL=hx
     export SUDO_EDITOR=hx
@@ -37,10 +37,10 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     # Linux (Linuxbrew & helix)
     [[ -f /home/linuxbrew/.linuxbrew/bin/brew ]] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-    
+
     export ANDROID_HOME="/opt/android-sdk"
     export ANDROID_SDK_ROOT="$ANDROID_HOME"
-    
+
     export EDITOR=helix
     export VISUAL=helix
     export SUDO_EDITOR=helix
@@ -61,8 +61,7 @@ alias ll='eza -alF --icons --color=always --group-directories-first'
 alias la='eza -a --icons --color=always --group-directories-first'
 alias l.='eza -a | egrep "^\."'
 alias py="python"
-alias hx="helix"
-alias tt="taskwarrior-tui"
+alias g=git
 
 set -o vi
 HISTFILE=~/.histfile
