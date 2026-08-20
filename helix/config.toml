@@ -42,12 +42,6 @@ a = "@6jzz"
 H = "select_regex"
 x = ["select_mode", "extend_line_below"]
 X = ["select_mode", "extend_line_above"]
-C-r = [
-    ":write-all",
-    ":insert-output scooter --no-stdin >/dev/tty",
-    ":redraw",
-    ":reload-all"
-]
 
 [keys.select]
 s = "@6kzz"
