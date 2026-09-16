@@ -6,4 +6,5 @@
     { "action": "read", "resource": "*", "effect": "ask" },
     { "action": "read", "resource": "*.env", "effect": "deny" },
   ],
+  "snapshots": false,
 }
