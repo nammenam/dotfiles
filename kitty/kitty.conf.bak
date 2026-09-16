@@ -1,7 +1,14 @@
-font_family      family="GeistMono Nerd Font Mono" style=Medium features=-ss11
-bold_font        family='GeistMono Nerd Font Mono' style=Bold features=-ss11
-italic_font      auto
-bold_italic_font auto
+# font_family      RobotoMono Nerd Font Medium
+# font_family      BlexMono Nerd Font Medium
+# font_family      Departure Mono
+# font_family      Liga SFMonoNerdFont Medium
+# font_family      GeistMono NF Medium
+# font_family      Commit Mono
+
+font_family GeistMono NFM Medium
+# bold_font auto
+# italic_font auto
+# bold_italic_font auto
 
 font_size 12
 cursor none
@@ -11,8 +18,7 @@ cursor_blink_interval 0
 
 scrollback_lines 10000
 
-map ctrl+shift+h launch --stdin-source=@screen_scrollback --type=overlay hx -
-map ctrl+shift+g launch --stdin-source=@last_cmd_output --type=overlay hx -
+map ctrl+shift+h launch --stdin-source=@screen_scrollback --type=overlay helix -
 
 enable_audio_bell no
 

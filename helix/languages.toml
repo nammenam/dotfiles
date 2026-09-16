@@ -1,3 +1,10 @@
+[language-server.scls]
+command = "simple-completion-language-server"
+
+[[language]]
+name = "zig"
+language-servers = [ "zls", "scls" ]
+
 [[language]]
 name = "python"
 auto-format = true

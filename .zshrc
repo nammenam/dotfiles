@@ -19,32 +19,21 @@ export TERMINAL=kitty
 export BAT_THEME=ansi
 export PATH=$PATH:~/.cargo/bin/
 export PATH=$PATH:~/.local/bin/
-
+export EDITOR=hx
+export VISUAL=hx
+export SUDO_EDITOR=hx
 
 # OS-Specific Configuration
 if [[ "$OSTYPE" == "darwin"* ]]; then
     # macOS (Homebrew & hx)
     [[ -f /opt/homebrew/bin/brew ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
-
     export ANDROID_HOME="$HOME/Library/Android/sdk"
     export ANDROID_SDK_ROOT="$ANDROID_HOME"
 
-    export EDITOR=hx
-    export VISUAL=hx
-    export SUDO_EDITOR=hx
-    alias helix="hx"
 
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    # Linux (Linuxbrew & helix)
-    [[ -f /home/linuxbrew/.linuxbrew/bin/brew ]] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
     export ANDROID_HOME="/opt/android-sdk"
     export ANDROID_SDK_ROOT="$ANDROID_HOME"
-
-    export EDITOR=helix
-    export VISUAL=helix
-    export SUDO_EDITOR=helix
-    alias hx="helix"
 fi
 
 # Add SDK components to PATH

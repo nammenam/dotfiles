@@ -10,6 +10,12 @@ scrolloff = 10
 auto-pairs = false
 trim-final-newlines = true
 trim-trailing-whitespace = true
+end-of-line-diagnostics = "disable"
+gutters = ["line-numbers", "spacer", "diff"]
+
+[editor.inline-diagnostics]
+cursor-line = "disable"
+other-lines = "disable"
 
 [editor.whitespace]
 render = "none"
@@ -28,10 +34,6 @@ max-wrap = 25
 max-indent-retain = 0
 wrap-indicator = ""
 wrap-at-text-width = false
-
-# s and d becomes navigation keys
-# a replaces d as deletion
-# w repaces a
 
 [keys.insert]
 "C-c" = "normal_mode"
@@ -77,3 +79,4 @@ mode.select = "SELECT"
 
 [editor.lsp]
 auto-signature-help = false
+snippets = true

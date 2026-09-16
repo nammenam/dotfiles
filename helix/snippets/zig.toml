@@ -1,0 +1,33 @@
+[[snippets]]
+prefix = "stdin"
+scope = ["zig"]
+description = "Stdin reader interface"
+body = """
+var stdin_buffer: [1 << 12]u8 = undefined;
+var stdin_reader = std.Io.File.stdin().reader(io, &stdin_buffer);
+const stdin = &stdin_reader.interface;
+"""
+
+[[snippets]]
+prefix = "stdout"
+scope = ["zig"]
+description = "Stdout writer interface"
+body = """
+var stdout_buffer: [1 << 12]u8 = undefined;
+var stdout_writer = std.Io.File.stdout().writer(io, &stdout_buffer);
+const stdout = &stdout_writer.interface;
+"""
+
+[[snippets]]
+prefix = "time"
+scope = ["zig"]
+description = "Timing"
+body = """
+var time: f32 = 0;
+var dt: f32 = 0;
+var t_last = std.Io.Clock.awake.now(io);
+const t_start = std.Io.Clock.awake.now(io);
+dt = @as(f32, @floatFromInt(t_last.untilNow(io, .awake).toNanoseconds())) / std.time.ns_per_s;
+t_last = std.Io.Clock.awake.now(io);
+time = @as(f32, @floatFromInt(t_start.untilNow(io, .awake).toNanoseconds())) / 1_000_000_000;
+"""

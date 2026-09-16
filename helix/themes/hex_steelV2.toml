@@ -65,10 +65,10 @@
 "ui.bufferline" = { fg = "gr0", bg = "black" }
 "ui.bufferline.active" = { fg = "t7", bg = "t2" }
 
-"diagnostic.error" = { underline = { color = "error", style = "curl" } }
-"diagnostic.warning" = { underline = { color = "warning", style = "curl" } }
-"diagnostic.info" = { underline = { color = "info", style = "curl" } }
-"diagnostic.hint" = { underline = { color = "display", style = "curl" } }
+"diagnostic.error" = { }
+"diagnostic.warning" = { }
+"diagnostic.info" = { }
+"diagnostic.hint" = { }
 
 "error" = { fg = "error", modifiers = ["bold"] }
 "warning" = { fg = "warning", modifiers = ["bold"] }
@@ -93,7 +93,7 @@ hints = "#31353c"
 ruler  = "#222320"
 
 bl = "#0e0e0d" # black
-t2 = "#1A1A1A" # Background
+t2 = "#161616" # Background
 gr0 = "#909090" # grey
 t4 = "#A0A0A0" # foreground
 gr1 = "#C0C0C0" # grey2
@@ -114,12 +114,12 @@ black = "#000000"
 comment = "#707070"
 comment_doc = "#202020"
 
-error   = "#e8403a"
+error   = "#E86060"
 warning = "#ffbf00"
 display = "#42baff"
 info = "#dad7d5"
 
-diff_minus = "#e8403a"
+diff_minus = "#E86060"
 diff_delta = "#dec683"
 diff_plus = "#4db066"
 diff_delta_moved = "#dec683"
