@@ -26,3 +26,10 @@
 [alias]
 	count = rev-list --left-right --count
 	l = log --oneline --graph
+    sw = switch
+    st = status
+    cm = commit
+    ps = push
+    pl = pull
+    rb = rebase
+    df = diff
