@@ -4,7 +4,6 @@ ZSH_THEME="bira"
 
 plugins=(
     fzf
-    git
     zsh-autosuggestions
     history-substring-search
 )
